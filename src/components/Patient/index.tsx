@@ -1,4 +1,6 @@
 import { Patient } from "../../types";
+import FemaleIcon from '@mui/icons-material/Female';
+import MaleIcon from '@mui/icons-material/Male';
 
 interface Props {
     patient: Patient | undefined;
@@ -11,7 +13,13 @@ const SinglePatient = ({ patient }: Props) => {
         );
     } else {
         return(
-            <p>{patient.name}</p>
+            <div>
+            <h2>{patient.name}</h2>
+            {patient.gender === 'female' ? <FemaleIcon /> : <MaleIcon />}
+            <p>ssn: {patient.ssn}</p>
+            <p>occupation: {patient.occupation}</p>
+            </div>
+
         );
     }
 };
