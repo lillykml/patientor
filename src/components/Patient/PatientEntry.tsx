@@ -16,17 +16,10 @@ const PatientEntry = ({ entry, diagnoses }: Props) => {
         case 'Hospital':
             return <Hospital entry={entry} diagnoses={diagnoses}/>;
         case 'OccupationalHealthcare': 
-            return <OccupationalHealthcare />;
+            return <OccupationalHealthcare entry={entry} diagnoses={diagnoses}/>;
         default:
             return assertNever(entry);
     }
-
-    return (
-        <div>
-            <p>{entry.date} {entry.description}</p>
-
-        </div>
-    );
 };
 
 export default PatientEntry;

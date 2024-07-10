@@ -13,7 +13,8 @@ const Hospital = ({ entry, diagnoses }: Props) => {
         <Box sx={{
             border: '1px solid black',
             borderRadius: '8px',
-            padding: '16px'
+            padding: '8px',
+            marginTop: '8px',
           }}>
           <p>{entry.date} <LocalHospitalIcon /></p>
           <p style={{fontStyle: 'italic'}}>{entry.description}</p>

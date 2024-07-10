@@ -23,7 +23,8 @@ const HealthCheck = ({ entry }: Props) => {
         <Box sx={{
             border: '1px solid black',
             borderRadius: '8px',
-            padding: '16px'
+            padding: '8px',
+            marginTop: '8px',
           }}>
             <p>{entry.date} <MedicalServicesIcon /></p>
             <p style={{fontStyle: 'italic'}}>{entry.description}</p>
